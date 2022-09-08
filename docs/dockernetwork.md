@@ -28,13 +28,6 @@ The four basic resources of virtualization are CPU, memory, storage and network 
 
 
 
-
-https://medium.com/edureka/docker-networking-1a7d65e89013 && https://docs.docker.com/network/ && https://docs.docker.com/network/bridge/
-
-
-
-
-
 # Docker Networking practice 
 
 In this lab you'll look at the most basic networking components that come with a fresh installation of Docker.
@@ -458,6 +451,3 @@ To remove the container and free up port 80 we need to stop container. Container
 $ docker container stop hello_nginx
 
 ```
-
-
-https://docs.docker.com/get-started/docker_cheatsheet.pdf
