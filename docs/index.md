@@ -7,8 +7,6 @@ The *getting started* guide on Docker has detailed instructions for setting up D
 
 *If you're using Docker for Windows* make sure you have [shared your drive](https://docs.docker.com/docker-for-windows/#shared-drives).
 
-*Important note* If you're using an older version of Windows or MacOS you may need to use [Docker Machine](https://docs.docker.com/machine/overview/) instead.
-
 *All commands work in either bash or Powershell on Windows*
 
 ## Check your Docker Installation
