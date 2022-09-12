@@ -399,4 +399,7 @@ docker run -it -v alpinedata:/data alpine /bin/sh
    Run any Docker image of your choice and utilize an anonymous volume. Locate and identify the directory on your host system where this anonymous volume is created.
 
 
-
+#### Check the files in the data directory and verify that they still exist 
+```bash
+ls data
+```
