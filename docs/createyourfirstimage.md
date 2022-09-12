@@ -233,10 +233,10 @@ alpine                     latest    9c6f07244728   2 weeks ago     5.54MB
 hello-world                latest    feb5d9fea6a5   11 months ago   13.3kB
 ```
 > Note: if you don't have an account, visit [Docker Hub](hhttps://hub.docker.com/) and create an account. 
-
-
-
 > ***Now that you are done with this container, stop and remove it since you won't be using it again.***
+
+
+
 
 >**Note:** If you want to learn more about Dockerfiles, check out [Best practices for writing Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/).
 
@@ -248,5 +248,37 @@ hello-world                latest    feb5d9fea6a5   11 months ago   13.3kB
 5. Write a Docker file to build a Docker image that runs a simple Java app in a Docker container. 
 6. Cleanup: You probably don't need any of these containers, therfore you may delete all of them.
 
-***Share your Dockerfile(s) in Moodle discussion thread.***
+## Creating Docker Volume within a **Dockerfile**
+
+###### Content of the Dockerfile
+```bash
+FROM alpine:latest
+RUN mkdir /data
+WORKDIR /data
+RUN echo "Hello from Volume" > test
+VOLUME /data
+CMD cat test
+```
+- Build the image `docker build . -t   vv`
+- Run it `docker run vv`  
+- Get the shell access and create some more files to it.
+- Delete the container and run the image again by attaching the volume . 
+- Check if your files still exist.
+
+## Creating Docker Volume within a **Dockerfile**
+
+###### Content of the Dockerfile
+```bash
+FROM alpine:latest
+RUN mkdir /data
+WORKDIR /data
+RUN echo "Hello from Volume" > test
+VOLUME /data
+CMD cat test
+```
+- Build the image `docker build . -t   vv`
+- Run it `docker run vv`  
+- Get the shell access and create some more files to it.
+- Delete the container and run the image again by attaching the volume . 
+- Check if your files still exist.
 
