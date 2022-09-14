@@ -137,7 +137,8 @@ Hello, World, I am learning to write a Dockerfile!
  PS D:\dock1> docker run -it my-first-image /bin/sh
 /usr/src/app # ls
 hello.sh
-/usr/src/app # nano new.txt/usr/src/app # ls
+/usr/src/app # nano new.txt
+/usr/src/app # ls
 hello.sh  new.txt
 ```
 ### Lets remove the nano from our Dockerfile
