@@ -218,3 +218,6 @@ Here is a list of commonly used Docker commands for managing containers:
 
 - `docker attach`: Attach to a running container to view its output or interact with its processes.
   - Example: `docker attach mycontainer`
+
+- `docker search`: Docker CLI tool for searching images from Docker Hub
+  - Example: `docker search mysql`
