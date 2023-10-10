@@ -207,10 +207,10 @@ CMD ./hello.sh
 ### Build your first image
 Now that our docker file is ready, we will use ***[docker build](https://docs.docker.com/engine/reference/commandline/build/)*** command to build our image. 
 
-The following **docker build** command will look for the `Dockerfile` and build as per instructions in the Dockerfile. The (.) specifies where to build and -t  flag tags the image with the name "my_first_image".
+The following **docker build** command will look for the `Dockerfile` and build as per instructions in the Dockerfile. The (.) specifies where to build and -t  flag tags the image with the name "my-first-image".
 
 ```bash 
-docker build -t my_first_image .
+docker build -t my-first-image .
 ``` 
 
 **Step 5:Run the Docker Container** 
@@ -321,7 +321,7 @@ When you update your application, fix bugs, implement security updates, or make 
 
 1. **Build the Image**: Use the `docker build` command to build the updated Docker image.
 ```
-docker build -t my_first_image:v1.1 .
+docker build -t my-first-image:v1.1 .
 ```
 2. **Tag the Image with a New Version**: Tag the new image version using `docker tag` with a relevant version number or tag.
 
