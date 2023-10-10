@@ -217,7 +217,7 @@ docker build -t my_first_image .
 
 Once the image is successfully built, you can run a container using the following command: 
 ```bash
-docker run my-first-image
+docker run my-first-image:latest
 ``` 
 **Step 6: Access the interactive terminal and use nano to create a text file called new.txt**
 
@@ -386,6 +386,9 @@ By following these steps, you can keep your Docker image up-to-date with the lat
 1. **Task 1: Building and Pushing a Docker Image**
 
    Write a Dockerfile to build a Docker image using Ubuntu. Include the MySQL database service in your image and push it to DockerHub. Tag the image as "username/ubuntu-git:1.1".
+
+   `Note` : Sometimes Debian baced systems will try to prompt user interaction when installing packages. By adding `ENV DEBIAN_FRONTEND=nonintercative` you will tell to Ubuntu Apt to not prompt for user input and use the default option.
+
 
 2. **Task 2: Running and Verifying the Image**
 
