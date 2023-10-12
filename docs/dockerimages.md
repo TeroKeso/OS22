@@ -387,7 +387,7 @@ By following these steps, you can keep your Docker image up-to-date with the lat
 
    Write a Dockerfile to build a Docker image using Ubuntu. Include the MySQL database service in your image and push it to DockerHub. Tag the image as "username/ubuntu-git:1.1".
 
-   `Note` : Sometimes Debian baced systems will try to prompt user interaction when installing packages. By adding `ENV DEBIAN_FRONTEND=nonintercative` you will tell to Ubuntu Apt to not prompt for user input and use the default option.
+   `Note` : Sometimes Debian baced systems will try to prompt user interaction when installing packages. By adding `ENV DEBIAN_FRONTEND=noninteractive` you will tell to Ubuntu Apt to not prompt for user input and use the default option.
 
 
 2. **Task 2: Running and Verifying the Image**
