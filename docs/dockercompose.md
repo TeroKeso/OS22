@@ -59,7 +59,7 @@ In this example, we will define two services: **webserver** and **database.**
 **Example 1: A docker compose file (docker-compose.yml)**
 
 ```yaml
-version:'3'
+version: '3'
 
 services:
   webserver:
