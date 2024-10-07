@@ -211,10 +211,10 @@ CMD ["./hello.sh"]
 ### Build your first image
 Now that our docker file is ready, we will use ***[docker build](https://docs.docker.com/engine/reference/commandline/build/)*** command to build our image. 
 
-The following **docker build** command will look for the `Dockerfile` and build as per instructions in the Dockerfile. The (.) specifies where to build and -t  flag tags the image with the name "my_first_image".
+The following **docker build** command will look for the `Dockerfile` and build as per instructions in the Dockerfile. The (.) specifies where to build and -t  flag tags the image with the name "my-first-image".
 
 ```bash 
-docker build -t my_first_image .
+docker build -t my-first-image .
 ``` 
 
 **Step 5:Run the Docker Container** 
@@ -333,20 +333,20 @@ When you update your application, fix bugs, implement security updates, or make 
 
 1. **Build the Image**: Use the `docker build` command to build the updated Docker image.
 ```
-docker build -t my_first_image2:v1.1 .
+docker build -t my-first-image2:v1.1 .
 ```
 2. **Tag the Image with a New Version**: Tag the new image version using `docker tag` with a relevant version number or tag.
 
 ```
 docker tag old_image_name:old_version new_image_name:new_version
 
-docker tag my_first_image2 deepakkc/my_first_image2:v1.1
+docker tag my-first-image2 deepakkc/my-first-image2:v1.1
 ```
 Replace old_image_name and old_version with the current image name and version, and set new_image_name and new_version to the desired new name and version for the image.
 
 3. **Push to Registry**: Use `docker push` to upload the new image version to your container registry.
 ```
-docker push deepakkc/my_first_image2:v1.1 
+docker push deepakkc/my-first-image2:v1.1 
 ```
 If you haven't logged in to the container registry where you want to push the image, use the docker login command to authenticate and then push the new image version:
 
