@@ -177,6 +177,7 @@ We'll make a ```Dockerfile``` that uses the official ```PHP Apache image``` (php
 FROM php:7.4-apache
 
 # Install PHP MySQL extensions
+ARG DEBIAN_FRONTEND=noninteractive
 RUN docker-php-ext-install mysqli pdo pdo_mysql && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
@@ -206,18 +207,16 @@ services:
       dockerfile: Dockerfile  # Dockerfile to use for building the web server
     ports:
       - "80:80"  # Map port 80 on the host to port 80 in the container, first par is host port on the host machine while second part is the port inside container
-    volumes:
-      - ./public:/var/www/html/index.php  # Bind-mount local index.php
     depends_on:
       - database  # Ensure the database service starts before the webserver
 
   database:
-    image: mysql:latest  # Use the latest MySQL image from Docker Hub
+    image: mysql:8.0  # Use MySQL version 8.0
     environment:
-      MYSQL_ROOT_PASSWORD: mysecretpassword  # Set the root password for MySQL
-      MYSQL_DATABASE: mydatabase  # Create a default database
-      MYSQL_USER: myuser  # Create a user for the database
-      MYSQL_PASSWORD: myuserpassword  # Set the password for the created user
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}  # Root password from environment variable
+      MYSQL_DATABASE: mydatabase  # Name of the default database
+      MYSQL_USER: user  # Username for the database
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}  # User password from environment variable
     volumes:
       - db_data:/var/lib/mysql  # Persist MySQL data using a named volume
 

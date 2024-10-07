@@ -1,4 +1,4 @@
-##  Building Docker Images with Dockerfile
+## Building Docker Images with Dockerfile
 
 Previously, we utilized **images** from the **registry (Dockerhub)** and instructed the Docker client to run a container based on that **image**. In this section, we will learn to create custom Docker images using Dockerfile. 
 
@@ -176,7 +176,7 @@ You can create a simple application in your favorite programming language. For t
 **Step 3:Create the Docker File**
 Now, create a Dockerfile in the same project directory. The name of the file is Dockerfile without any extension. The content of the Dockerfile is as below:
 
-> ***Note: Please use IDE such as Visual Studio code to create Dockerfile. If you use notepad, it adds .txt extension to the file and the build won't work.***
+> ***Note: Please use IDE such as Visual Studio code to create Dockerfile. Notepad 2024 is a little bit problematic with generating linux native files. Typically Windows generate CRLF and we need the .sh file to be in LF format. ***
 
 ```  
 # Start from the alpine image. It sets  the base image for the Docker image to the 
