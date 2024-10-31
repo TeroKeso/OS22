@@ -1,4 +1,4 @@
 {
-    "workbench.editor.enablePreview": true,
-    "workbench.startupEditor": "terminal"
+    "workbench.editor.enablePreview": false,
+    "workbench.startupEditor": "termnal"
 }
