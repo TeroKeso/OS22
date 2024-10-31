@@ -1,4 +1,4 @@
 {
     "workbench.editor.enablePreview": true,
-    "workbench.startupEditor": "docs/index.md"
+    "workbench.startupEditor": "terminal"
 }
