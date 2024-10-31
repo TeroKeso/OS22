@@ -1,6 +1,5 @@
 {
-    "workbench.editor.enablePreview": true,
-    "workbench.startupEditor": "readme",
+    "workbench.startupEditor": "terminal",
     "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor"
     }
